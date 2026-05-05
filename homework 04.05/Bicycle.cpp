@@ -1,7 +1,7 @@
 #include "Bicycle.h"
 
 Bicycle::Bicycle()
-    :Vehicle(brand, model, VIN_number, speed, price, productionYear)
+    :Vehicle()
 {
     style = "No info";
 }
@@ -31,7 +31,7 @@ void Bicycle::print() const
     cout << "Max speed: " << speed << " km/h" << endl;
     cout << "Price: " << price << "$" << endl;
     cout << "ProductionYear: " << productionYear << endl;
-    cout << "Style: " << style << endl;
+    cout << "Style: " << style << endl << endl;
 }
 
 void Bicycle::save(ofstream& file) const

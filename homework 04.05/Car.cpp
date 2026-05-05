@@ -1,7 +1,7 @@
 #include "Car.h"
 
 Car::Car()
-    :Vehicle(brand, model, VIN_number, speed, price, productionYear)
+    :Vehicle()
 {
     bodyType = "No info";
 }
@@ -31,7 +31,7 @@ void Car::print() const
     cout << "Max speed: " << speed <<" km/h" << endl;
     cout << "Price: " << price << "$" << endl;
     cout << "ProductionYear: " << productionYear << endl;
-    cout << "Body type: " << bodyType << endl;
+    cout << "Body type: " << bodyType << endl << endl;
 }
 
 

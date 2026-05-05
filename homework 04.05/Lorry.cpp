@@ -1,7 +1,7 @@
 #include "Lorry.h"
 
 Lorry::Lorry()
-    :Vehicle(brand, model, VIN_number, speed, price, productionYear)
+    :Vehicle()
 {
     loadCapacity = 0;
 }
@@ -31,7 +31,7 @@ void Lorry::print() const
     cout << "Max speed: " << speed << " km/h" << endl;
     cout << "Price: " << price << "$" << endl;
     cout << "ProductionYear: " << productionYear << endl;
-    cout << "LoadCapacity: " << loadCapacity <<" tons" << endl;
+    cout << "LoadCapacity: " << loadCapacity <<" tons" << endl << endl;
 }
 
 void Lorry::save(ofstream& file) const

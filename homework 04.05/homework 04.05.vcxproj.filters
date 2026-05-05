@@ -30,6 +30,9 @@
     <ClCompile Include="Lorry.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Garage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Vehicle.h">
@@ -42,6 +45,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Lorry.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Garage.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
