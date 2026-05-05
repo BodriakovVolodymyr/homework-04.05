@@ -1,23 +1,22 @@
 #pragma once
 #include "Vehicle.h"
-class Car :
+class Lorry :
     public Vehicle
 {
 protected:
-	string bodyType;
+    int loadCapacity;
 public:
-    Car();
-    Car(string brand, string model, string VIN_number, int speed, float price, int productionYear, string bodyType);
+    Lorry();
+    Lorry(string brand, string model, string VIN_number, int speed, float price, int productionYear, int loadCapacity);
 
-	void setBodyType(string bodyType);
+	void setLoadCapacity(int loadCapacity);
 
-	string getBodyType()const;
+	int getLoadCapacity()const;
 
 
 	virtual void print()const override;
 	virtual void save(ofstream& file)const override;
 	virtual void load(ifstream& file)override;
 	virtual string type()const override;
-
 };
 

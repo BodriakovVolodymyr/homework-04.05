@@ -2,13 +2,17 @@
 
 Vehicle::Vehicle()
 {
+    brand = "No info";
+    model = "No info";
     VIN_number = "No info";
     speed = 0;
     price = 0;
 }
 
-Vehicle::Vehicle(string VIN_number, int speed, float price, Date productionYear)
+Vehicle::Vehicle(string brand, string model, string VIN_number, int speed, float price, int productionYear)
 {
+    this->brand = brand;
+    this->model = model;
     this->VIN_number = VIN_number;
     this->speed = speed;
     this->price = price;
@@ -17,6 +21,16 @@ Vehicle::Vehicle(string VIN_number, int speed, float price, Date productionYear)
 
 Vehicle::~Vehicle()
 {
+}
+
+void Vehicle::setBrand(string brand)
+{
+    this->brand = brand;
+}
+
+void Vehicle::setModel(string model)
+{
+    this->model = model;
 }
 
 void Vehicle::setVIN_number(string VIN_number)
@@ -34,9 +48,19 @@ void Vehicle::setPrice(float price)
     this->price = price;
 }
 
-void Vehicle::setProductionYear(Date productionYear)
+void Vehicle::setProductionYear(int productionYear)
 {
     this->productionYear = productionYear;
+}
+
+string Vehicle::getBrand() const
+{
+    return brand;
+}
+
+string Vehicle::getModel() const
+{
+    return model;
 }
 
 string Vehicle::getVIN_number() const
@@ -54,7 +78,7 @@ float Vehicle::getPrice() const
     return price;
 }
 
-Date Vehicle::getProductionYear() const
+int Vehicle::getProductionYear() const
 {
     return productionYear;
 }

@@ -2,33 +2,38 @@
 #include <string>
 #include <iostream>
 #include <fstream>
-#include "Date.h"
+
 
 using namespace std;
 
 class Vehicle
 {
 protected:
+	string brand;
+	string model;
 	string VIN_number;
 	int speed;
 	float price;
-	Date productionYear;
+	int productionYear;
 
 public:
 	Vehicle();
-	Vehicle(string VIN_number, int speed,float price, Date productionYear);
+	Vehicle(string brand, string model, string VIN_number, int speed,float price, int productionYear);
 	virtual ~Vehicle();
 
-
+	void setBrand(string brand);
+	void setModel(string model);
 	void setVIN_number(string VIN_number);
 	void setSpeed(int speed);
 	void setPrice(float price);
-	void setProductionYear(Date productionYear);
+	void setProductionYear(int productionYear);
 
+	string getBrand()const;
+	string getModel()const;
 	string getVIN_number()const;
 	int getSpeed()const;
 	float getPrice()const;
-	Date getProductionYear()const;
+	int getProductionYear()const;
 
 	virtual void print()const = 0;
 	virtual void save(ofstream& file)const = 0;
