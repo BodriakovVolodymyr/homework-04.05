@@ -25,4 +25,20 @@ int main()
 	My.addVehicle(new Bicycle("Corso ", "Skywalker", "2HKRL18661H508524", 10, 1200, 2025, "Mountain Bike"));
 	My.addVehicle(new Lorry("Volvo", "FH13", "3VWD17AJ0FM356868", 90, 37000, 2012, 35));
 	My.showList();
+
+	cout << "List after remove item"<<endl;
+	My.removeVehicle("2HKRL18661H508524");
+	My.showList();
+
+	My.findByType("Car");
+	cout << "\n---\n";
+	My.findByTypeAndSpeed("Car", 200);
+	cout << "\n---\n";
+	My.findByVIN("3VWD17AJ0FM356868");
+
+	My.editVehiclebyVIN("2B3HD56G22H204209");
+
+	My.sortBySpeed();
+	cout << "After sorting by speed" << endl;
+	My.showList();
 }

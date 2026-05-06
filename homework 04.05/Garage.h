@@ -14,5 +14,11 @@ public:
 
 	void showList();
 	void addVehicle(Vehicle* obj);
+	void removeVehicle(string VIN_number);
+	void findByVIN(string VIN_number);
+	void sortBySpeed();
+	void findByType(string type);
+	void findByTypeAndSpeed(string type, int speed);
+	void editVehiclebyVIN(string vin);
 };
 
